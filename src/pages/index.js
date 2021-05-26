@@ -17,6 +17,7 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       autoRotate={true}
+      autoRotateSpeed = {1.0}
       enableZoom={false}
     />
   );
@@ -38,21 +39,26 @@ const Skybox = () => {
 }
 
 const Sphere = () => {
-  const texture = useLoader(TextureLoader, "/texture.jpg");
+  const [texture, displacementMap] = useLoader(TextureLoader, ["/texture.jpg","/displacement.jpg"]);
   return (
     <mesh>
       <sphereGeometry attach="geometry" args={[2, 32, 32]} />
-      <meshBasicMaterial attach="material" map={texture} />
+      <meshBasicMaterial attach="material" map={texture} displacementMap={displacementMap} />
     </mesh>
   )
 }
 
-export default () => (
+
+export default () => {
+  return (
+  <>
   <Canvas>
     <CameraControls />
     <Suspense fallback={null}>
       <Skybox />
-      <Sphere />
+      <Sphere className="sphere"/>
     </Suspense>
   </Canvas>
+</>
 )
+}
