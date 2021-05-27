@@ -52,7 +52,7 @@ const Sphere = () => {
 export default () => {
   return (
   <>
-  <Canvas style={{height:100,width:100}}>
+  <Canvas style={{height:760,width:360}}>
     <CameraControls />
     <Suspense fallback={null}>
       <Skybox />
