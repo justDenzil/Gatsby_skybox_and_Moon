@@ -1,10 +1,19 @@
 import React, { useRef, Suspense } from "react"
-import { Canvas, extend, useThree, useFrame, useLoader } from "@react-three/fiber"
+import { Canvas, extend, useThree, useFrame, useLoader, render, events } from "@react-three/fiber"
 import { 
   TextureLoader,
   CubeTextureLoader } from "three"
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "../styles/styles.css"
+
+window.addEventListener('resize', () =>
+  render(<mesh />, document.querySelector('canvas'), {
+    events,
+    size: { width: window.innerWidth, height: window.innerHeight },
+  })
+)
+
+window.dispatchEvent(new Event('resize'))
 
 extend({ OrbitControls });
 
