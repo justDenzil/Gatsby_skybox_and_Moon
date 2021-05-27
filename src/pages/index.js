@@ -3,6 +3,7 @@ import { Canvas, extend, useThree, useFrame, useLoader, render, events } from "@
 import { 
   TextureLoader,
   CubeTextureLoader } from "three"
+import { Html } from "drei";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "../styles/styles.css"   
 
@@ -22,6 +23,16 @@ const CameraControls = () => {
     />
   );
 };
+
+const HTMLContent = () => {
+  return (
+        <Html>
+          <div className='container'>
+            <div className='title'>Start your next big endeavour</div>
+          </div>
+        </Html>
+  )
+}
 
 const Skybox = () => {
   const { scene } = useThree();
@@ -52,9 +63,10 @@ const Sphere = () => {
 export default () => {
   return (
   <>
-  <Canvas style={{ width: '100%', height: '100%', position: 'absolute' }}>
+  <Canvas style={{ width: '100%', height: '100%', position: 'absolute' }} resize={{ scroll: false }}>
     <CameraControls />
     <Suspense fallback={null}>
+      <HTMLContent />
       <Skybox />
       <Sphere className="sphere"/>
     </Suspense>
