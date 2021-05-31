@@ -5,7 +5,8 @@ import {
   CubeTextureLoader } from "three"
 import { Html } from "drei";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import "../styles/styles.css"   
+import "../styles/styles.css"
+
 
 extend({ OrbitControls });
 
@@ -26,31 +27,31 @@ const CameraControls = () => {
 
 const HTMLContent = () => {
   return (
-        <Html fullscreen>
-         <div class="container">
-          <div class="container-1">
-              <div class="text">
+        <Html center>
+         <div className="container">
+          <div className="container-1">
+              <div className="text">
                   <h1>Ready to start your next big endeavour ?</h1>
               </div>
           </div>
-          <div class="container-2">
-              <div class="button">
+          <div className="container-2">
+              <div className="button">
                   <a href="mailto:contact@haloweave.com">Mail Us</a>
               </div>
           </div>
-          <div class="container-2">
-              <div class="socials">
-                  <div class="icons">
-                      <div class="box-1"><a href="https://google.com"><i class="fab fa-github"></i></a></div>
-                      <div class="box-2"><a href="https://google.com"><i class="fab fa-twitter"></i></a></div>
-                      <div class="box-3"><a href="https://google.com"><i class="fab fa-instagram"></i></a></div>
-                      <div class="box-4"><a href="https://google.com"><i class="fab fa-behance"></i></a></div>
-                      <div class="box-5"><a href="https://google.com"><i class="fab fa-linkedin"></i></a></div>
+          <div className="container-2">
+              <div className="socials">
+                  <div className="icons">
+                      <div className="box-1"><a href="https://google.com"><i className="fab fa-github"></i></a></div>
+                      <div className="box-2"><a href="https://google.com"><i className="fab fa-twitter"></i></a></div>
+                      <div className="box-3"><a href="https://google.com"><i className="fab fa-instagram"></i></a></div>
+                      <div className="box-4"><a href="https://google.com"><i className="fab fa-behance"></i></a></div>
+                      <div className="box-5"><a href="https://google.com"><i className="fab fa-linkedin"></i></a></div>
                   </div>
               </div>
           </div>
-          <div class="container-3">
-              <div class="made-with">
+          <div className="container-3">
+              <div className="made-with">
                   <p>Made with ❤️ by haloweave</p>
               </div>
           </div>
