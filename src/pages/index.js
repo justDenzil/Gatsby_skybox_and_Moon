@@ -6,6 +6,7 @@ import {
 import { Html } from "drei";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "../styles/styles.css"
+import "font-awesome/css/font-awesome.min.css";
 
 
 extend({ OrbitControls });
@@ -42,7 +43,7 @@ const HTMLContent = () => {
           <div className="container-2">
               <div className="socials">
                   <div className="icons">
-                      <div className="box-1"><a href="https://google.com"><i className="fab fa-github"></i></a></div>
+                      <div className="box-1"><a href="https://google.com"><i className="fa-github"></i></a></div>
                       <div className="box-2"><a href="https://google.com"><i className="fab fa-twitter"></i></a></div>
                       <div className="box-3"><a href="https://google.com"><i className="fab fa-instagram"></i></a></div>
                       <div className="box-4"><a href="https://google.com"><i className="fab fa-behance"></i></a></div>
