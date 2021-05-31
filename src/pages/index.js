@@ -64,7 +64,7 @@ const Skybox = () => {
   const { scene } = useThree();
   const loader = new CubeTextureLoader();
   const texture = loader.load([
-    "/haloweave.png",
+    "/1.png",
     "/2.png",
     "/3.png",
     "/4.png",
