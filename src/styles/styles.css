@@ -14,7 +14,7 @@ body,
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,11 +22,9 @@ body,
 }
 
 .text h1 {
-    width: 500px;
     text-align: center;
     color: white;
     margin: 0;
-    padding: 10px;
     -webkit-touch-callout: none;
       -webkit-user-select: none;
        -khtml-user-select: none;

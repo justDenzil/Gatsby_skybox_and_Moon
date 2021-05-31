@@ -79,7 +79,7 @@ const Sphere = () => {
   const [texture, displacementMap] = useLoader(TextureLoader, ["/moon.png","/displacement.jpg"]);
   return (
     <mesh position={[0, 0.47, 0]}>
-      <sphereGeometry attach="geometry" args={[2, 30, 30]} />
+      <sphereGeometry attach="geometry" args={[2, 20, 20]} />
       <meshBasicMaterial attach="material" map={texture} displacementMap={displacementMap} />
     </mesh>
   )
