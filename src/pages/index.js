@@ -28,7 +28,7 @@ const CameraControls = () => {
 
 const HTMLContent = () => {
   return (
-        <Html center>
+        <Html fullscreen>
          <div className="container">
           <div className="container-1">
               <div className="text">
@@ -43,7 +43,7 @@ const HTMLContent = () => {
           <div className="container-2">
               <div className="socials">
                   <div className="icons">
-                      <div className="box-1"><a href="https://google.com"><i className="fa-github"></i></a></div>
+                      <div className="box-1"><a href="https://google.com"><i className="fab fa-github"></i></a></div>
                       <div className="box-2"><a href="https://google.com"><i className="fab fa-twitter"></i></a></div>
                       <div className="box-3"><a href="https://google.com"><i className="fab fa-instagram"></i></a></div>
                       <div className="box-4"><a href="https://google.com"><i className="fab fa-behance"></i></a></div>
