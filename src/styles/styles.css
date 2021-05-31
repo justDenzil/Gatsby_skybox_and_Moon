@@ -21,6 +21,29 @@ body,
     align-items: center;
 }
 
+.text h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
+.made-with p {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+}
+
 .icons {
     display: flex;
     gap: 20px;
