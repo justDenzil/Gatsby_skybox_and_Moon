@@ -26,8 +26,8 @@ const CameraControls = () => {
 
 const HTMLContent = () => {
   return (
-        <Html>
-                <div class="container">
+        <Html fullscreen>
+         <div class="container">
           <div class="container-1">
               <div class="text">
                   <h1>Ready to start your next big endeavour ?</h1>
