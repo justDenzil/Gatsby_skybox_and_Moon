@@ -14,8 +14,7 @@ body,
 }
 
 .container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +22,9 @@ body,
 }
 
 .text h1 {
+    width: 500px;
     text-align: center;
+    color: white;
     margin: 0;
     padding: 10px;
     -webkit-touch-callout: none;
@@ -35,9 +36,6 @@ body,
 }
 
 .made-with p {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     text-align: center;
     margin: 0;
     padding: 10px;
