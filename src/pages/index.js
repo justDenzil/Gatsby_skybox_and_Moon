@@ -1,5 +1,5 @@
 import React, { useRef, Suspense } from "react"
-import { Canvas, extend, useThree, useFrame, useLoader, render, events } from "@react-three/fiber"
+import { Canvas, extend, useThree, useFrame, useLoader, useUpdate } from "@react-three/fiber"
 import { 
   TextureLoader,
   CubeTextureLoader } from "three"
@@ -27,13 +27,34 @@ const CameraControls = () => {
 const HTMLContent = () => {
   return (
         <Html>
-          <div className="container">
-            <div className="box-1">github</div>
-            <div className="box-2">linkedin</div>
-            <div className="box-3">twitter</div>
-            <div className="box-4">behance</div>
-            <div className="box-5">instagram</div>
+                <div class="container">
+          <div class="container-1">
+              <div class="text">
+                  <h1>Ready to start your next big endeavour ?</h1>
+              </div>
           </div>
+          <div class="container-2">
+              <div class="button">
+                  <a href="mailto:contact@haloweave.com">Mail Us</a>
+              </div>
+          </div>
+          <div class="container-2">
+              <div class="socials">
+                  <div class="icons">
+                      <div class="box-1"><a href="https://google.com"><i class="fab fa-github"></i></a></div>
+                      <div class="box-2"><a href="https://google.com"><i class="fab fa-twitter"></i></a></div>
+                      <div class="box-3"><a href="https://google.com"><i class="fab fa-instagram"></i></a></div>
+                      <div class="box-4"><a href="https://google.com"><i class="fab fa-behance"></i></a></div>
+                      <div class="box-5"><a href="https://google.com"><i class="fab fa-linkedin"></i></a></div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-3">
+              <div class="made-with">
+                  <p>Made with ❤️ by haloweave</p>
+              </div>
+          </div>
+      </div>
         </Html>
   )
 }
