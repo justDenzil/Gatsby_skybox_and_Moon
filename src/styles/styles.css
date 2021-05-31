@@ -15,6 +15,7 @@ body,
 
 .container {
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,7 +25,7 @@ body,
 .text h1 {
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     -webkit-touch-callout: none;
       -webkit-user-select: none;
        -khtml-user-select: none;
@@ -34,8 +35,13 @@ body,
 }
 
 .made-with p {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    margin: 0;
     -webkit-touch-callout: none;
       -webkit-user-select: none;
        -khtml-user-select: none;
