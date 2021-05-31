@@ -27,8 +27,12 @@ const CameraControls = () => {
 const HTMLContent = () => {
   return (
         <Html>
-          <div className='container'>
-            <div className='title'>Start your next big endeavour</div>
+          <div className="container">
+            <div className="box-1">github</div>
+            <div className="box-2">linkedin</div>
+            <div className="box-3">twitter</div>
+            <div className="box-4">behance</div>
+            <div className="box-5">instagram</div>
           </div>
         </Html>
   )
@@ -50,10 +54,10 @@ const Skybox = () => {
 }
 
 const Sphere = () => {
-  const [texture, displacementMap] = useLoader(TextureLoader, ["/texture.jpg","/displacement.jpg"]);
+  const [texture, displacementMap] = useLoader(TextureLoader, ["/moon.png","/displacement.jpg"]);
   return (
-    <mesh>
-      <sphereGeometry attach="geometry" args={[2, 32, 32]} />
+    <mesh position={[0, 0.47, 0]}>
+      <sphereGeometry attach="geometry" args={[2, 30, 30]} />
       <meshBasicMaterial attach="material" map={texture} displacementMap={displacementMap} />
     </mesh>
   )
@@ -63,13 +67,12 @@ const Sphere = () => {
 export default () => {
   return (
   <>
-  <Canvas style={{ width: '100%', height: '100%', position: 'absolute' }} resize={{ scroll: false }}>
+  <Canvas style={{ width: '100%', height: '100vh' }} resize={{ scroll: false }}>
     <CameraControls />
     <Suspense fallback={null}>
       <HTMLContent />
       <Skybox />
-      {/*comment*/}
-      <Sphere className="sphere"/>
+      <Sphere />
     </Suspense>
   </Canvas>
 </>
