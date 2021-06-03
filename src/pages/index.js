@@ -6,9 +6,6 @@ import {
 import { Html } from "drei";
 import Media from "react-media";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import "../styles/styles.css"
-import "font-awesome/css/font-awesome.min.css";
-
 
 extend({ OrbitControls });
 
@@ -30,34 +27,6 @@ const CameraControls = () => {
 const HTMLContent = () => {
   return (
         <Html fullscreen>
-         <div className="container">
-          <div className="container-1">
-              <div className="text">
-                  <h1>Ready to start your next big endeavour ?</h1>
-              </div>
-          </div>
-          <div className="container-2">
-              <div className="button">
-                  <a href="mailto:contact@haloweave.com">Mail Us</a>
-              </div>
-          </div>
-          <div className="container-2">
-              <div className="socials">
-                  <div className="icons">
-                      <div className="box-1"><a href="https://google.com"><i className="fab fa-github"></i></a></div>
-                      <div className="box-2"><a href="https://google.com"><i className="fab fa-twitter"></i></a></div>
-                      <div className="box-3"><a href="https://google.com"><i className="fab fa-instagram"></i></a></div>
-                      <div className="box-4"><a href="https://google.com"><i className="fab fa-behance"></i></a></div>
-                      <div className="box-5"><a href="https://google.com"><i className="fab fa-linkedin"></i></a></div>
-                  </div>
-              </div>
-          </div>
-          <div className="container-3">
-              <div className="made-with">
-                  <p>Made with ❤️ by haloweave</p>
-              </div>
-          </div>
-      </div>
         </Html>
   )
 }
