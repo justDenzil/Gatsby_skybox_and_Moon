@@ -4,6 +4,7 @@ import {
   TextureLoader,
   CubeTextureLoader } from "three"
 import { Html } from "drei";
+import Media from "react-media";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import "../styles/styles.css"
 import "font-awesome/css/font-awesome.min.css";
@@ -79,8 +80,18 @@ const Skybox = () => {
 const Sphere = () => {
   const [texture, displacementMap] = useLoader(TextureLoader, ["/moon.png","/displacement.jpg"]);
   return (
-    <mesh position={[0, 0.47, 0]}>
+    <mesh position={[0, 0, 0]}>
       <sphereGeometry attach="geometry" args={[2, 20, 20]} />
+      <meshBasicMaterial attach="material" map={texture} displacementMap={displacementMap} />
+    </mesh>
+  )
+}
+
+const SphereMobile = () => {
+  const [texture, displacementMap] = useLoader(TextureLoader, ["/moon.png","/displacement.jpg"]);
+  return (
+    <mesh position={[0, 0, 0]}>
+      <sphereGeometry attach="geometry" args={[1.5, 20, 20]} />
       <meshBasicMaterial attach="material" map={texture} displacementMap={displacementMap} />
     </mesh>
   )
@@ -95,7 +106,15 @@ export default () => {
     <Suspense fallback={null}>
       <HTMLContent />
       <Skybox />
-      <Sphere />
+      <Media queries={{ small: { maxWidth: 599 } }}>
+        {matches =>
+          matches.small ? (
+            <SphereMobile />
+          ) : (
+            <Sphere />
+          )
+        }
+      </Media>
     </Suspense>
   </Canvas>
 </>
