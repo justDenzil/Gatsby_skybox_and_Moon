@@ -6,6 +6,10 @@ import {
 import { Html } from "drei";
 import Media from "react-media";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import "../styles/htmlstyles.css"
+import "../styles/handoff.css"
+import "../styles/variables.css"
+import "../styles/materialIcons.css"
 
 extend({ OrbitControls });
 
@@ -27,6 +31,40 @@ const CameraControls = () => {
 const HTMLContent = () => {
   return (
         <Html fullscreen>
+        <main className="quick-start">
+         <div className="container">
+           <h1 className="heading">Start your next big endeavor.</h1>
+           <button className="button">Mail Us!</button>
+         <div className="columns" id="col">
+          <div className="quick-start__column">
+            <button className="icon-button">
+              <i className="material-icons quick-start__icon">power_settings_new</i>
+            </button>
+          </div>
+          <div className="quick-start__column">
+            <button className="icon-button-2">
+              <i className="material-icons quick-start__icon">power_settings_new</i>
+            </button>
+          </div>
+          <div className="quick-start__column">
+            <button className="icon-button-3">
+              <i className="material-icons quick-start__icon">power_settings_new</i>
+            </button>
+          </div>
+          <div className="quick-start__column">
+            <button className="icon-button-4">
+              <i className="material-icons quick-start__icon">power_settings_new</i>
+            </button>
+          </div>
+          <div className="quick-start__column">
+            <button className="icon-button-5">
+              <i className="material-icons quick-start__icon">power_settings_new</i>
+            </button>
+          </div>
+        </div>
+        <div className="text">from haloweave ❤️</div>
+      </div>
+    </main>
         </Html>
   )
 }
